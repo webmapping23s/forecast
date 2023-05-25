@@ -59,7 +59,7 @@ async function showForecast(url, latlng) {
         let icon = timeseries[i].data.next_1_hours.summary.symbol_code;
         let image = `icons/${icon}.svg`;
         markup += `<img src="${image}" style="width:32px;" title="${timeseries[i].time.toLocaleString()}">`
-        console.log(icon, image);
+        //console.log(icon, image);
     }
 
     L.popup().setLatLng(latlng).setContent(markup).openOn(map);
@@ -77,3 +77,5 @@ map.on("click", function(evt) {
 map.fireEvent("click", {
     latlng: L.latLng(ibk.lat, ibk.lng)
 })
+
+
