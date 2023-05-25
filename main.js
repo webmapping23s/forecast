@@ -62,7 +62,7 @@ async function showForecast(url, latlng) {
         //console.log(icon, image);
     }
 
-    L.popup().setLatLng(latlng).setContent(markup).openOn(map);
+    L.popup().setLatLng(latlng).setContent(markup).openOn(themaLayer.forecast);
 
 }
 
